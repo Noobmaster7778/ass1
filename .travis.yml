@@ -1,0 +1,3 @@
+language: java
+scriot: mvn compile
+script: mvn clean test

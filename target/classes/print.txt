@@ -1,0 +1,16 @@
+File file=new File("print.txt");
+            try {
+                FileOutputStream out=new FileOutputStream(file);
+                byte text[]=getArea().getText().replaceAll("\n","\r\n").getBytes(StandardCharsets.UTF_8);
+                out.write(text);
+                out.close();
+            } catch (Exception e){e.printStackTrace();}
+
+
+            try {
+                text2pdf("print.txt","print.pdf");
+            } catch (DocumentException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            
