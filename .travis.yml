@@ -1,3 +1,6 @@
 language: java
-scriot: mvn compile
+services:
+  - xvfb
+before_script:
+  - export DISPLAY=:99.0
 script: mvn clean test
